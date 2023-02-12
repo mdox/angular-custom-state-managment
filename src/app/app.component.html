@@ -1,0 +1,14 @@
+<div>
+    <button type="button" (click)="addNewMockItem()">Add New Mock Item</button>
+</div>
+<div>
+    <button type="button" (click)="changeRandomItem()">
+        Change Random Item
+    </button>
+</div>
+
+<div *ngFor="let item of items | async">
+    <span>{{ item.name }}</span>
+    {{ " " }}
+    <span>{{ item.price }}</span>
+</div>
