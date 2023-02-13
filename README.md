@@ -1,3 +1,3 @@
-Goals:
-- [X] Detect changes of array
-- [X] Detect changes of array elements individually
+Goals for `ItemListService`:
+- [X] Detect changes of `Item` array
+- [X] Detect changes of `Item` array elements individually
