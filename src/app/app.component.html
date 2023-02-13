@@ -7,8 +7,4 @@
     </button>
 </div>
 
-<div *ngFor="let item of items | async">
-    <span>{{ item.name }}</span>
-    {{ " " }}
-    <span>{{ item.price }}</span>
-</div>
+<item *ngFor="let item of items | async" [id]="item.value.id"></item>

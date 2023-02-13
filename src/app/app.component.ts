@@ -12,7 +12,10 @@ let nextId = 0;
 export class AppComponent implements OnInit {
     title = 'angular-custom-state-managment';
 
-    constructor(private itemListService: ItemListService) {}
+    constructor(private itemListService: ItemListService) {
+        // @ts-ignore
+        globalThis.appComponent = this;
+    }
 
     addNewMockItem() {
         const id = ++nextId;
@@ -31,7 +34,7 @@ export class AppComponent implements OnInit {
         const index = Math.floor(Math.random() * count);
         const item = this.items.value[index];
 
-        this.itemListService.changeItem(item.id, {
+        this.itemListService.changeItem(item.value.id, {
             price: Math.floor(Math.random() * 1000),
         });
     }
